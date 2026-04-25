@@ -19,7 +19,7 @@ app.post('/convert', async (req, res) => {
     try {
        browser = await puppeteer.launch({
     headless: 'new',
-    executablePath: puppeteer.executablePath(),
+    executablePath: '/usr/bin/chromium',
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
