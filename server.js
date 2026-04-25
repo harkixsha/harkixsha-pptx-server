@@ -17,8 +17,9 @@ app.post('/convert', async (req, res) => {
 
     let browser;
     try {
-        browser = await puppeteer.launch({
-            headless: 'new',
+       browser = await puppeteer.launch({
+    headless: 'new',
+    executablePath: puppeteer.executablePath(),
             args: [
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
